@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ShopMvc",
+    "\\ShopMvc\\Controllers",
+    "\\ShopMvc\\Data",
+    "\\ShopMvc\\Models",
+    "\\ShopMvc\\obj",
+    "\\ShopMvc\\Views",
+    "\\ShopMvc\\Views\\Products",
+    "\\ShopMvc\\Views\\Shared"
+  ],
+  "SelectedNode": "\\ShopMvc\\Models\\Product.cs",
+  "PreviewInSolutionExplorer": false
+}

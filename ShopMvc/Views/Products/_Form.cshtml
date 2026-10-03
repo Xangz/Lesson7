@@ -1,0 +1,49 @@
+@model ProductViewModel
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<input type="hidden" asp-for="Id" />
+<input type="hidden" asp-for="Image" />
+
+<div class="mb-3">
+    <label asp-for="Name" class="form-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="CategoryId" class="form-label"></label>
+    <select asp-for="CategoryId" class="form-select" asp-items="(SelectList)ViewBag.Categories">
+        <option value="">-- Chọn danh mục --</option>
+    </select>
+    <span asp-validation-for="CategoryId" class="text-danger"></span>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" type="text" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="col-md-6 mb-3">
+        <label asp-for="SalePrice" class="form-label"></label>
+        <input asp-for="SalePrice" type="text" class="form-control" />
+        <span asp-validation-for="SalePrice" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <label asp-for="ImageFile" class="form-label"></label>
+    @if (!string.IsNullOrEmpty(Model.Image))
+    {
+        <div class="mb-2"><img src="~/products/@Model.Image" style="height:100px" /></div>
+    }
+    <input asp-for="ImageFile" type="file" accept="image/*" class="form-control" />
+    <span asp-validation-for="ImageFile" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Description" class="form-label"></label>
+    <textarea asp-for="Description" rows="5" class="form-control"></textarea>
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
